@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Jogo</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Jogo do Stop</h1>
+
+    <p>Nome do Jogador: <span id="nomeJogador"></span></p>
+
+    <button onclick="iniciarJogo()">Iniciar Jogo</button>
+
+    <script>
+        const nomeJogador = sessionStorage.getItem("nomeJogador");
+        if (nomeJogador) {
+            document.getElementById("nomeJogador").textContent = nomeJogador;
+        } else {
+            // Se o nome do jogador não estiver definido na sessão, redirecione de volta para a página de login
+            window.location.href = "index.html";
+        }
+
+        function iniciarJogo() {
+            // Implemente a lógica para iniciar o jogo aqui
+            alert("Jogo iniciado!");
+        }
+    </script>
+</body>
+</html>
